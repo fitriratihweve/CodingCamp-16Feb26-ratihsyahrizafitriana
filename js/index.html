@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratih Todo List</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <!-- Header Content -->
+    <header>
+        <h1 class="text-4xl font-bold">TODO LIST - by Ratih</h1> <br/>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Form Section -->
+        <section>
+            <form>
+                <!-- Todo Input -->
+                <input class="border p-2 rounded" type="text" id="todo-input" placeholder="Enter a new todo item">
+
+                <!-- Date Input -->
+                <input class="border p-2 rounded" type="date" id="todo-date" placeholder="Enter due date"><br/><br/>
+            </form>
+
+            <!-- Add Button -->
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onclick="addTodo()"
+                type="button">Add
+                Todo</button>
+        </section>
+
+        <!-- Action Section -->
+        <section class="flex pt-2 justify-between">
+            <!-- Clear All Button -->
+            <button onclick="deleteAllTodo()" class="border rounded p-2 bg-yellow-500 text-black">Clear All Todos</button>
+
+            <!-- Filter Options -->
+            <button id="filter-btn" class="border rounded p-2 font-semibold bg-yellow-500 text-white">
+                Filter Todos
+            </button>
+        </section>
+
+        <!-- Todo List Section -->
+        <section class="pt-2">
+            <header>
+                <h1 class="text-2xl font-semibold">List of Todos</h1>
+            </header>
+
+            <ul class="pt-2" id="todo-list">
+                <!-- Todo items will be dynamically added here -->
+                <li>No todos available</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Javascript External -->
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
